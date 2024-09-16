@@ -1,0 +1,9 @@
+export const Center = ({ children }: {children: React.ReactNode}): JSX.Element => {
+    return (
+        <div className="flex justify-center flex-col h-full">
+            <div className="flex justify-center items-center">
+                {children}
+            </div>
+        </div>
+    );
+}
