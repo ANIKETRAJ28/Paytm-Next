@@ -38,7 +38,7 @@ model onRampTransaction {
   amount    Int
   startTime DateTime
   userId    Int
-  user      User          @relation(fields: [userId], references: [id])
+  user      User          @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Balance {
@@ -46,7 +46,7 @@ model Balance {
   userId Int    @unique
   amount Int
   locked Int
-  user    User  @relation(fields: [userId], references: [id])
+  user    User  @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 enum AuthType {
