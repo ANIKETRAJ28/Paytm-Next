@@ -24,7 +24,7 @@ export function SendCard() {
                         setTransaction({...transaction, amount: value});
                     }} />
                     <div className="pt-4 flex justify-center">
-                        <Button onClick={() => p2pTxn(transaction.number, Number(transaction.amount))}>Send</Button>
+                        <Button onClick={() => p2pTxn(transaction.number, Number(transaction.amount)*100)}>Send</Button>
                     </div>
                 </div>
             </Card>
